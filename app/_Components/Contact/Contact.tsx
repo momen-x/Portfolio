@@ -32,11 +32,8 @@ const Contact = () => {
     // }, 2000);
 
     try {
-      const response = await axios.post(
-        `${domin}/api/momen_protoflio/users`,
-        form
-      );
-      const data = response.data;
+      await axios.post(`${domin}/api/momen_protoflio/users`, form);
+      // const data = response.data;
       setForm({ name: "", email: "", message: "" });
     } catch (error) {
       console.log("err becaue i dont know", error);
