@@ -11,6 +11,7 @@ const pages = [
   { icon: IoHome, label: "Home", path: "/" },
   { icon: MdWork, label: "Work", path: "#work" },
   { icon: FcAbout, label: "About", path: "#about" },
+  { icon: FcAbout, label: "Contact", path: "#contact" },
 ];
 
 const UserHeader = () => {

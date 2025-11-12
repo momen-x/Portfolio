@@ -28,13 +28,16 @@ const HeroSection = () => {
 
           {/* CTA buttons with proper colors */}
           <div className="mt-8 flex gap-4">
+            <Link href={"#work"}>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-6 py-3 bg-linear-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all"
             >
+
               View My Work
             </motion.button>
+</Link>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

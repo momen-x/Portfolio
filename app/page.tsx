@@ -20,7 +20,9 @@ export default function Home() {
         <WorkPage />
       </div>
       <Feedback />
-      <Contact />
+      <div id="contact">
+        <Contact />
+      </div>
       <Stars />
     </div>
   );
