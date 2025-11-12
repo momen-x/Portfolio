@@ -37,7 +37,7 @@ const Contact = () => {
         form
       );
       const data = response.data;
-      console.log("data is : ", data);
+      setForm({ name: "", email: "", message: "" });
     } catch (error) {
       console.log("err becaue i dont know", error);
     } finally {
