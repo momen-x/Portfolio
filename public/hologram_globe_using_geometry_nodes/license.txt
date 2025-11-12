@@ -1,0 +1,11 @@
+Model Information:
+* title:	Hologram Globe using Geometry Nodes
+* source:	https://sketchfab.com/3d-models/hologram-globe-using-geometry-nodes-0c65d232e07e46be9e8d4c691bc82350
+* author:	ibrahimnasir.dh1022 (https://sketchfab.com/ibrahimnasir.dh1022)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Hologram Globe using Geometry Nodes" (https://sketchfab.com/3d-models/hologram-globe-using-geometry-nodes-0c65d232e07e46be9e8d4c691bc82350) by ibrahimnasir.dh1022 (https://sketchfab.com/ibrahimnasir.dh1022) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
