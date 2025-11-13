@@ -16,6 +16,8 @@
       {
         "select-name": "off"
       }
-    ]
+    ],
+    "detect-css-reflows/composite": "off",
+    "detect-css-reflows/paint": "off"
   }
 }
