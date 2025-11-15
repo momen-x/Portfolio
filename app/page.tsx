@@ -11,12 +11,16 @@ import Tech from "./_Components/Tech";
 export default function Home() {
   return (
     <div>
+      <div id="">
+
       <HeroSection />
+      </div>
       <div id="about">
         <AboutPage />
-      </div>
+     
       <Experience />
       <Tech />
+       </div>
       <div id="work">
         <WorkPage />
       </div>

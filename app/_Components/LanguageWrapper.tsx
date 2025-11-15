@@ -24,6 +24,13 @@ export default function LanguageWrapper({
       document.body.classList.remove("font-arabic");
       document.body.classList.add("font-sans");
     }
+    // to do and when move to another section
+
+    window.scroll({
+      top: 0,
+      left: 0,
+      // behavior: "smooth",
+    });
   }, [language]);
 
   return (

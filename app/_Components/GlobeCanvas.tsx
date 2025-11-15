@@ -40,7 +40,7 @@ const Globe = () => {
       {/* FIXED: position and rotation are arrays, not hyphenated props */}
       <primitive
         object={earth.scene}
-        scale={50}
+        scale={90}
         position={[0, -1.25, 1.0]}
         rotation={[0, -0.5, 0]}
       />
@@ -79,7 +79,7 @@ const GlobeCanvas = () => {
           fov: 35,
           near: 1,
           far: 45,
-          position: [10, 28, 8],
+          position: [-24, 40, 10],
         }}
         style={{
           // width: "100%",
@@ -96,6 +96,9 @@ const GlobeCanvas = () => {
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
           />
+          
+          <ambientLight intensity={0.2} color={"white"}/>
+          {/* <directionalLight position={[5,5,5]} intensity={1}/> */}
           <Globe />
           <Preload all />
         </Suspense>

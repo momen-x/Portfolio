@@ -1,4 +1,5 @@
 // app/data/testimonials.ts
+import "@/public/images/Next.jpg";
 const testimonials = [
   {
     testimonial: "feedback.testimonial1",
@@ -6,6 +7,7 @@ const testimonials = [
     designation: "feedback.designation1",
     company: "feedback.company1",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
+    // "/images/Next.jpg",
   },
   {
     testimonial: "feedback.testimonial2",
@@ -13,6 +15,7 @@ const testimonials = [
     designation: "feedback.designation2",
     company: "feedback.company2",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
+    // "/images/Next.jpg",
   },
   {
     testimonial: "feedback.testimonial3",
@@ -20,6 +23,7 @@ const testimonials = [
     designation: "feedback.designation3",
     company: "feedback.company3",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
+    // "/images/Next.jpg",
   },
 ];
 

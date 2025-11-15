@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import github from "@/public/assets/github.png";
 import { projects } from "@/app/data/projects";
-import "./work.css";
 import ReusableTitle from "../../_Components/ReusableTitle";
 import { useLanguage } from "@/app/context/LanguageContext";
+
 
 const containerVariants = {
   hidden: { opacity: 0 },

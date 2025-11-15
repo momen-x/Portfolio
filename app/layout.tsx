@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
 import {
@@ -11,6 +10,7 @@ import {
 import { LanguageProvider } from "@/app/context/LanguageContext";
 import UserHeader from "./_Components/Header";
 import LanguageWrapper from "./_Components/LanguageWrapper";
+import { cookies } from "next/headers";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -56,13 +56,23 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Get language from cookies on server side
+  const cookieStore = await cookies();
+  const langCookie = cookieStore.get("lang");
+  const initialLang = langCookie?.value === "ar" ? "ar" : "en";
+  
+  // Set initial HTML attributes based on language
+  const dir = initialLang === "ar" ? "rtl" : "ltr";
+  const fontClass = initialLang === "ar" ? "font-arabic" : "font-sans";
+
   return (
     <html
-      lang="en"
-      className={`${inter.variable} ${jetbrainsMono.variable} ${orbitron.variable} ${tajawal.variable} ${cairo.variable} `}
+      lang={initialLang}
+      dir={dir}
+      className={`${inter.variable} ${jetbrainsMono.variable} ${orbitron.variable} ${tajawal.variable} ${cairo.variable}`}
     >
-      <body className="backgroundContainer font-sans">
-        <LanguageProvider>
+      <body className={`backgroundContainer ${fontClass}`}>
+        <LanguageProvider initialLang={initialLang}>
           <LanguageWrapper>
             <UserHeader />
             {children}

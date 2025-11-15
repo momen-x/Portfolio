@@ -3,6 +3,8 @@
 import { IoHome } from "react-icons/io5";
 import { MdWork } from "react-icons/md";
 import { FcAbout } from "react-icons/fc";
+import { RiContactsFill } from "react-icons/ri";
+
 import { useRouter, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import logo from "@/app/favicon.ico";
@@ -17,9 +19,9 @@ const UserHeader = () => {
   const { language, setLanguage, t } = useLanguage();
   const pages = [
     { icon: IoHome, label: t("nav.home"), path: "/" },
-    { icon: MdWork, label: t("nav.work"), path: "#work" },
     { icon: FcAbout, label: t("nav.about"), path: "#about" },
-    { icon: FcAbout, label: t("nav.contact"), path: "#contact" },
+    { icon: MdWork, label: t("nav.work"), path: "#work" },
+    { icon: RiContactsFill, label: t("nav.contact"), path: "#contact" },
   ];
 
   // Listen for hash changes
@@ -149,10 +151,16 @@ const UserHeader = () => {
               onChange={(e) => setLanguage(e.target.value as any)}
               className="appearance-none bg-linear-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-md border border-gray-600/40 text-white pl-12 pr-12 py-3 rounded-2xl focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-500/30 transition-all duration-300 cursor-pointer hover:bg-linear-to-br hover:from-gray-700/80 hover:to-gray-800/80 hover:border-gray-500/60 hover:shadow-2xl hover:shadow-blue-500/20 font-medium text-sm min-w-40 shadow-lg shadow-black/20"
             >
-              <option value="en" className="bg-gray-800 text-white py-2 rounded-full">
+              <option
+                value="en"
+                className="bg-gray-800 text-white py-2 rounded-full"
+              >
                 🇬🇧 English
               </option>
-              <option value="ar" className="bg-gray-800 text-white py-2 rounded-full">
+              <option
+                value="ar"
+                className="bg-gray-800 text-white py-2 rounded-full"
+              >
                 🇵🇸 العربية
               </option>
             </select>
