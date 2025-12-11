@@ -3,17 +3,21 @@ import { motion } from "framer-motion";
 import ComputerCanvas from "./ComputerCanvas";
 import Link from "next/link";
 import { useLanguage } from "../context/LanguageContext";
+const my_cv = "@/assets/CV.pdf";
 
 const HeroSection = () => {
   const { t } = useLanguage();
-  const newLocal = <motion.div
-    animate={{ y: [0, 20, 9] }}
-    transition={{
-      duration: 1.5,
-      repeat: Infinity,
-      repeatType: "loop",
-    }}
-    className="w-2 h-2 rounded-full bg-white" />;
+  const newLocal = (
+    <motion.div
+      animate={{ y: [0, 20, 9] }}
+      transition={{
+        duration: 1.5,
+        repeat: Infinity,
+        repeatType: "loop",
+      }}
+      className="w-2 h-2 rounded-full bg-white"
+    />
+  );
   return (
     <section className="relative w-full h-screen mx-auto">
       {/* Text Content - Positioned at top */}
@@ -47,13 +51,23 @@ const HeroSection = () => {
                 {t("hero.myWork")}
               </motion.button>
             </Link>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all"
-            >
-              {t("hero.cv")}
-            </motion.button>
+       <motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all"
+  onClick={() => {
+    // Force download instead of opening
+    const link = document.createElement('a');
+    link.href = '/CV.pdf';
+    link.download = 'CV.pdf';
+     // Custom filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }}
+>
+  {t("hero.cv")}
+</motion.button>
           </div>
         </div>
       </div>
