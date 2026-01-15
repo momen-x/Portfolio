@@ -55,6 +55,9 @@ const translations = {
     "work.description": "Projects",
     "work.content":
       "Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.",
+    "work.project8Name": "Admin Dashboard e-Commerce",
+    "work.project8Description":
+      "A user-friendly admin dashboard designed specifically for frontend developers, enabling them to customize and manage website content without needing to understand or modify backend code",
     "work.project1Name": "E-commerce",
     "work.project1Description":
       "A full-stack e-commerce platform featuring user authentication, product catalog, shopping cart, and secure checkout functionality with MongoDB integration.",
@@ -73,12 +76,6 @@ const translations = {
     "work.project6Name": "Movies List",
     "work.project6Description":
       "A movie discovery application featuring a browsable catalog of films, detailed movie information, ratings, and search functionality powered by an external API.",
-    "work.project7Name": "Pray Time",
-    "work.project7Description":
-      "An Islamic prayer times application that displays accurate prayer schedules based on location, with notifications and daily reminders for Muslims worldwide.",
-    "work.project8Name": "Admin Dashboard e-Commerce",
-    "work.project8Description":
-      "A user-friendly admin dashboard designed specifically for frontend developers, enabling them to customize and manage website content without needing to understand or modify backend code",
     "work.livedemo": "Live Demo",
     "work.src": "code src",
     "feedback.peopleSay": "What People Say",
@@ -153,6 +150,9 @@ const translations = {
       "تُظهر المشاريع التالية مهاراتي وخبرتي من خلال أمثلة واقعية من أعمالي. يُوصف كل مشروع بإيجاز مع روابط لمستودعات الأكواد والعروض التوضيحية المباشرة. يعكس هذا قدرتي على حل المشكلات المعقدة، والعمل مع تقنيات مختلفة، وإدارة المشاريع بفعالية.",
     "work.title": "أعمالي",
     "work.description": "المشاريع",
+    "work.project8Name": "لوحة تحكم الإدارة للتجارة الإلكترونية",
+    "work.project8Description":
+      "لوحة تحكم إدارية سهلة الاستخدام مصممة خصيصًا لمطوري الواجهة الأمامية، مما يُمكّنهم من تخصيص وإدارة محتوى الموقع الإلكتروني دون الحاجة إلى فهم أو تعديل كود الواجهة الخلفية.",
     "work.project1Name": "متجر إلكتروني",
     "work.project1Description":
       "منصة تجارة إلكترونية متكاملة تشمل نظام تسجيل المستخدمين، كتالوج المنتجات، سلة التسوق، ونظام دفع آمن مع تكامل قاعدة بيانات MongoDB.",
@@ -171,13 +171,6 @@ const translations = {
     "work.project6Name": "قائمة الأفلام",
     "work.project6Description":
       "تطبيق اكتشاف الأفلام الذي يعرض كتالوجاً للأفلام القابلة للتصفح، معلومات تفصيلية عن الأفلام، التقييمات، ووظيفة البحث مدعومة بواجهة برمجة تطبيقات خارجية.",
-    "work.project7Name": "مواقيت الصلاة",
-    "work.project7Description":
-      "تطبيق مواقيت الصلاة الإسلامي الذي يعرض جداول الصلاة الدقيقة بناءً على الموقع، مع إشعارات وتذكيرات يومية للمسلمين حول العالم.",
-
-    "work.project8Name": "لوحة تحكم الإدارة للتجارة الإلكترونية",
-    "work.projectDescription":
-      "لوحة تحكم إدارية سهلة الاستخدام مصممة خصيصًا لمطوري الواجهة الأمامية، مما يُمكّنهم من تخصيص وإدارة محتوى الموقع الإلكتروني دون الحاجة إلى فهم أو تعديل كود الواجهة الخلفية.",
     "work.livedemo": "عرض الموقع",
     "work.src": "الكود المصدري",
     "experience.title": "ما قمت به حتى الآن",

@@ -152,17 +152,5 @@ export const projects: Project[] = [
     source_code_link: "https://github.com/momen-x/display-movies",
     project_link: "https://shiny-stroopwafel-4c4cd9.netlify.app",
   },
-  // {
-  //   name: "work.project7Name",
-  //   description: "work.project7Description",
-  //   tags: [
-  //     {
-  //       name: "React js",
-  //       color: "blue-text-gradient",
-  //     },
-  //   ],
-  //   image: prayTime.src,
-  //   source_code_link: "https://github.com/momen-x/pray-timing",
-  //   project_link: "https://superb-alpaca-92ead5.netlify.app",
-  // },
+ 
 ];
