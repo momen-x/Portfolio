@@ -1,13 +1,19 @@
 // app/data/testimonials.ts
-import "@/public/images/Next.jpg";
-const testimonials = [
+interface Testimonial {
+  testimonial: string;
+  name: string;
+  designation: string;
+  company: string;
+  image: string;
+}
+
+const testimonials: Testimonial[] = [
   {
     testimonial: "feedback.testimonial1",
     name: "feedback.name1",
     designation: "feedback.designation1",
     company: "feedback.company1",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
-    // "/images/Next.jpg",
   },
   {
     testimonial: "feedback.testimonial2",
@@ -15,7 +21,6 @@ const testimonials = [
     designation: "feedback.designation2",
     company: "feedback.company2",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
-    // "/images/Next.jpg",
   },
   {
     testimonial: "feedback.testimonial3",
@@ -23,7 +28,6 @@ const testimonials = [
     designation: "feedback.designation3",
     company: "feedback.company3",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
-    // "/images/Next.jpg",
   },
 ];
 

@@ -76,6 +76,9 @@ const translations = {
     "work.project7Name": "Pray Time",
     "work.project7Description":
       "An Islamic prayer times application that displays accurate prayer schedules based on location, with notifications and daily reminders for Muslims worldwide.",
+    "work.project8Name": "Admin Dashboard e-Commerce",
+    "work.project8Description":
+      "A user-friendly admin dashboard designed specifically for frontend developers, enabling them to customize and manage website content without needing to understand or modify backend code",
     "work.livedemo": "Live Demo",
     "work.src": "code src",
     "feedback.peopleSay": "What People Say",
@@ -171,6 +174,10 @@ const translations = {
     "work.project7Name": "مواقيت الصلاة",
     "work.project7Description":
       "تطبيق مواقيت الصلاة الإسلامي الذي يعرض جداول الصلاة الدقيقة بناءً على الموقع، مع إشعارات وتذكيرات يومية للمسلمين حول العالم.",
+
+    "work.project8Name": "لوحة تحكم الإدارة للتجارة الإلكترونية",
+    "work.projectDescription":
+      "لوحة تحكم إدارية سهلة الاستخدام مصممة خصيصًا لمطوري الواجهة الأمامية، مما يُمكّنهم من تخصيص وإدارة محتوى الموقع الإلكتروني دون الحاجة إلى فهم أو تعديل كود الواجهة الخلفية.",
     "work.livedemo": "عرض الموقع",
     "work.src": "الكود المصدري",
     "experience.title": "ما قمت به حتى الآن",

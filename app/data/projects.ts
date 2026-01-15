@@ -1,12 +1,47 @@
-import eCom from "@/public/assets/eCom.jpg";
+import eCom from "@/public/assets/ecom.png";
 import wikiApp from "@/public/assets/wikiApp.jpg";
 import pizzaShop from "@/public/assets/pizzaShop.jpg";
 import IPM from "@/public/assets/IPM.jpg";
 import Todolist from "@/public/assets/toDoList.jpg";
-import prayTime from "@/public/assets/prayTime.jpg";
 import moviesList from "@/public/assets/moviesList.jpg";
+import admin from "@/public/assets/Admin_dashPoard_e_commerce.png";
 
-export const projects = [
+interface Tag {
+  name: string;
+  color: string;
+}
+
+export interface Project {
+  name: string;
+  description: string;
+  tags: Tag[];
+  image: string;
+  source_code_link: string;
+  project_link: string;
+}
+
+export const projects: Project[] = [
+  {
+    name: "work.project8Name",
+    description: "work.project8Description",
+    tags: [
+      {
+        name: "Next js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "postgresql",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: admin.src,
+    source_code_link: "https://github.com/momen-x/e-commerce-Admin-dashboard-",
+    project_link: "https://e-commerce-admin-dashboard-three.vercel.app",
+  },
   {
     name: "work.project1Name",
     description: "work.project1Description",

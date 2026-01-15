@@ -1,4 +1,7 @@
 // app/data/Experience.ts
+import reactImg from "@/public/images/react.png";
+import nextImg from "@/public/images/Next.jpg";
+
 interface IExperience {
   title: string; // This will be translation keys
   path: string;
@@ -11,14 +14,14 @@ const myExperience: IExperience[] = [
   {
     date: "experience.frontDate",
     title: "experience.frontTitle",
-    path: "/images/react.png",
+    path: reactImg.src,
     iconBg: "#000",
     points: ["experience.front1", "experience.front2", "experience.front3"],
   },
   {
     date: "experience.BackDate",
     title: "experience.BackTitle",
-    path: "/images/Next.jpg",
+    path: nextImg.src,
     iconBg: "#000",
     points: [
       "experience.back1",
