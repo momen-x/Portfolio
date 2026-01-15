@@ -260,19 +260,26 @@ export function LanguageProvider({
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const setLanguage = (lang: Language) => {
-    if (lang !== language) {
+    // Ensure lang is valid and not an event object
+    if (lang !== language && (lang === "en" || lang === "ar")) {
       setIsTransitioning(true);
       setTimeout(() => {
         setLanguageState(lang);
-        Cookies.set("lang", lang, { expires: 365 });
+        try {
+          Cookies.set("lang", lang, { expires: 365 });
+        } catch (e) {
+          console.error("Failed to set language cookie:", e);
+        }
         setIsTransitioning(false);
       }, 300);
     }
   };
 
   const t = (key: string): string => {
-    if (key in translations[language]) {
-      return translations[language][key as TranslationKeys];
+    // Fallback to 'en' if language is somehow invalid
+    const currentLang = translations[language] ? language : "en";
+    if (key in translations[currentLang]) {
+      return translations[currentLang][key as TranslationKeys];
     }
     return key;
   };
