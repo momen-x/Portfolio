@@ -82,11 +82,11 @@ const translations = {
     "feedback.testimonials": "Testimonials",
     "feedback.note": "💡 Note: Using sample data for demonstration purposes",
     "feedback.testimonial1":
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+      "I thought it was impossible to make a website as beautiful as our product, but Mo'men proved me wrong.",
     "feedback.testimonial2":
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
+      "I've never met a web developer who truly cares about their clients' success like Mo'men does.",
     "feedback.testimonial3":
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "After Mo'men optimized our website, our traffic increased by 50%. We can't thank them enough!",
     "feedback.name1": "Sara Lee",
     "feedback.designation1": "CFO",
     "feedback.company1": "Acme Co",
@@ -192,11 +192,11 @@ const translations = {
     "feedback.testimonials": "التوصيات",
     "feedback.note": "💡 ملاحظة: استخدام بيانات نموذجية لأغراض التوضيح",
     "feedback.testimonial1":
-      "اعتقدت أنه من المستحيل إنشاء موقع إلكتروني جميل مثل منتجنا، لكن ريك أثبت أنني مخطئ.",
+      "اعتقدت أنه من المستحيل إنشاء موقع إلكتروني جميل مثل منتجنا، لكن مؤمن أثبت أنني مخطئ.",
     "feedback.testimonial2":
-      "لم أقابل قط مطور ويب يهتم حقًا بنجاح عملائه مثل ريك.",
+      "لم أقابل قط مطور ويب يهتم حقًا بنجاح عملائه مثل مؤمن.",
     "feedback.testimonial3":
-      "بعد أن قام ريك بتحسين موقعنا، زادت حركة المرور لدينا بنسبة 50٪. لا يمكننا شكره بما يكفي!",
+      "بعد أن قام مؤمن بتحسين موقعنا، زادت حركة المرور لدينا بنسبة 50٪. لا يمكننا شكره بما يكفي!",
     "feedback.name1": "سارة لي",
     "feedback.designation1": "المدير المالي",
     "feedback.company1": "شركة أكمي",
