@@ -22,15 +22,15 @@ const HeroSection = () => {
       <div className="relative z-10 px-4 pt-20 max-w-7xl mx-auto flex flex-row items-start gap-5">
         <div className="flex flex-col justify-center items-center mt-5">
           {/* Line and dot with colors */}
-          <div className="w-5 h-5 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 shadow-lg shadow-blue-500/30" />
-          <div className="w-1 sm:h-80 h-40 rounded-full bg-gradient-to-b from-blue-400/80 to-purple-400/80" />
+          <div className="w-5 h-5 rounded-full bg-linear-to-r from-blue-400 to-purple-400 shadow-lg shadow-blue-500/30" />
+          <div className="w-1 sm:h-80 h-40 rounded-full bg-linear-to-b from-blue-400/80 to-purple-400/80" />
         </div>
 
         <div className="ml-4">
           {/* White text with gradient accent */}
           <h1 className="text-4xl sm:text-6xl font-bold text-white">
-            {t("hero.who")}
-            <span className="text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text">
+            {t("hero.who")} {" "}
+            <span className="text-transparent bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text">
               {t("hero.name")}
             </span>
           </h1>
@@ -43,7 +43,7 @@ const HeroSection = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all"
+                className="px-6 py-3 bg-linear-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all"
               >
                 {t("hero.myWork")}
               </motion.button>

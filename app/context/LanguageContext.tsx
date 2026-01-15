@@ -1,6 +1,6 @@
 // context/LanguageContext.tsx
 "use client";
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 import Cookies from "js-cookie";
 
 type Language = "en" | "ar";
@@ -239,14 +239,6 @@ const translations = {
 
 type TranslationKeys = keyof typeof translations.en;
 
-// Helper to get initial language from cookie
-function getInitialLanguage(): Language {
-  if (typeof window === "undefined") return "en";
-
-  const cookieLang = Cookies.get("lang");
-  return cookieLang === "ar" || cookieLang === "en" ? cookieLang : "en";
-}
-
 export function LanguageProvider({
   children,
   initialLang,
@@ -254,14 +246,28 @@ export function LanguageProvider({
   children: React.ReactNode;
   initialLang?: Language;
 }) {
-  const [language, setLanguageState] = useState<Language>(
-    initialLang || getInitialLanguage()
-  );
+  // Initialize with 'en' (or initialLang) to ensure server/client match and prevent hydration errors.
+  const [language, setLanguageState] = useState<Language>(initialLang || "en");
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  // Sync with cookie on client side if initialLang wasn't provided
+  useEffect(() => {
+    if (!initialLang) {
+      const cookieLang = Cookies.get("lang");
+      if (cookieLang === "ar" || cookieLang === "en") {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setLanguageState(cookieLang);
+      }
+    }
+  }, [initialLang]);
 
   const setLanguage = (lang: Language) => {
     // Ensure lang is valid and not an event object
-    if (lang !== language && (lang === "en" || lang === "ar")) {
+    if (
+      typeof lang === "string" &&
+      lang !== language &&
+      (lang === "en" || lang === "ar")
+    ) {
       setIsTransitioning(true);
       setTimeout(() => {
         setLanguageState(lang);

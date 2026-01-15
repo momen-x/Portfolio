@@ -1,10 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ExternalLink, Github } from "lucide-react"; // Better icons
-import github from "@/public/assets/github.png";
+import { ExternalLink, Github } from "lucide-react"; 
 import { projects } from "@/app/data/projects";
 import ReusableTitle from "../../_Components/ReusableTitle";
 import { useLanguage } from "@/app/context/LanguageContext";
@@ -38,7 +36,7 @@ const ProjectCard = ({
   project_link: string;
 }) => {
   const { t } = useLanguage();
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered] = useState(false);
 
   return (
     <motion.div
@@ -53,8 +51,7 @@ const ProjectCard = ({
         scale={1.02}
         transitionSpeed={450}
         className="bg-gray-900/50 backdrop-blur-sm p-5 rounded-2xl w-full border border-gray-700/50 hover:border-blue-500/30 transition-all duration-300"
-        // onMouseEnter={() => setIsHovered(true)}
-        // onMouseLeave={() => setIsHovered(false)}
+    
       >
         <div className="relative w-full h-48 rounded-xl overflow-hidden">
           <Image
@@ -69,7 +66,7 @@ const ProjectCard = ({
           {/* Always-visible buttons for mobile, enhanced on hover for desktop */}
           <div className={`
             absolute inset-0 flex items-end justify-between p-4
-            ${isHovered ? 'bg-black/40' : 'bg-gradient-to-t from-black/60 via-transparent to-transparent'}
+            ${isHovered ? 'bg-black/40' : 'bg-linear-to-t from-black/60 via-transparent to-transparent'}
             transition-all duration-300
           `}>
             <button
