@@ -5,12 +5,13 @@ import Experience from "./_Components/Experience";
 import Feedback from "./_Components/Feedback";
 import Footer from "./_Components/footer";
 import HeroSection from "./_Components/Hero";
-import StarsCanvas from "./_Components/Stars";
 import Tech from "./_Components/Tech";
 
 export default function Home() {
   return (
     <div>
+          
+
       <div id="">
 
       <HeroSection />
@@ -28,7 +29,7 @@ export default function Home() {
       <div id="contact">
         <Contact />
       </div>
-      <StarsCanvas />
+      {/* <StarsCanvas /> */}
       <Footer />
     </div>
   );

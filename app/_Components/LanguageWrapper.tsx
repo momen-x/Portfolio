@@ -1,4 +1,3 @@
-// app/_Components/LanguageWrapper.tsx
 "use client";
 import { useLanguage } from "../context/LanguageContext";
 import { useEffect } from "react";

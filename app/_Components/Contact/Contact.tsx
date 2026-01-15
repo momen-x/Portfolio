@@ -1,12 +1,6 @@
 "use client";
-import { useState } from "react";
 import { motion } from "framer-motion";
-// import "./Contact.css";
-import { TAddUser } from "@/app/validation/addUser";
-import axios from "axios";
-import { domin } from "@/app/lib/domin";
-import GlobeCanvas from "../GlobeCanvas";
-import { useLanguage } from "@/app/context/LanguageContext"; // Add this import
+import { useLanguage } from "@/app/context/LanguageContext"; 
 
 const contactWayList = [
   {
@@ -38,118 +32,12 @@ const contactWayList = [
   },
 ];
 
-// const ContactWayCard = ({
-//   appName,
-//   text,
-//   path,
-//   link,
-//   index,
-//   directmessage,
-//   message,
-//   color = "blue",
-// }: {
-//   appName: string;
-//   text: string;
-//   path: string;
-//   directmessage: string;
-//   message: string;
-//   link: string;
-//   index: number;
-//   color?: string;
-// }) => {
-//   const { t } = useLanguage();
-
-//   const colorClasses =
-//     {
-//       green:
-//         "bg-green-500/20 text-green-400 hover:border-green-500/30 hover:bg-green-500/10",
-//       blue: "bg-blue-500/20 text-blue-400 hover:border-blue-500/30 hover:bg-blue-500/10",
-//       indigo:
-//         "bg-indigo-500/20 text-indigo-400 hover:border-indigo-500/30 hover:bg-indigo-500/10",
-//     }[color] ||
-//     "bg-blue-500/20 text-blue-400 hover:border-blue-500/30 hover:bg-blue-500/10";
-
-//   return (
-//     <motion.div
-//       initial={{ opacity: 0, y: 20 }}
-//       whileInView={{ opacity: 1, y: 0 }}
-//       transition={{ duration: 0.5, delay: index * 0.1 }}
-//       viewport={{ once: true }}
-//       className="bg-gray-800/30 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-gray-700/50 hover:border-opacity-100 transition-all duration-300 group"
-//     >
-//       <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-//         <div
-//           className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center shrink-0 ${
-//             colorClasses.split(" ")[0]
-//           } ${colorClasses.split(" ")[1]}`}
-//         >
-//           <svg
-//             className="w-6 h-6 sm:w-7 sm:h-7"
-//             viewBox="0 0 24 24"
-//             fill="currentColor"
-//           >
-//             <path d={path} />
-//           </svg>
-//         </div>
-
-//         <div className="flex-1 min-w-0 w-full">
-//           <h4 className="text-white font-semibold text-base sm:text-lg mb-1 truncate">
-//             {t(appName)}
-//           </h4>
-//           <p className="text-gray-400 text-xs sm:text-sm mb-2 break-all">
-//             {t(directmessage)}
-//           </p>
-//           <code className="text-gray-300 text-xs sm:text-sm font-mono block mb-3 break-all">
-//             {t(text)}
-//           </code>
-
-//           <button
-//             onClick={() => window.open(link, "_blank")}
-//             className={`w-full sm:w-auto px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105 ${
-//               color === "green"
-//                 ? "bg-green-500 hover:bg-green-600"
-//                 : color === "blue"
-//                 ? "bg-blue-500 hover:bg-blue-600"
-//                 : "bg-indigo-500 hover:bg-indigo-600"
-//             } text-white shadow-lg hover:shadow-xl`}
-//           >
-//             {t(message)}
-//           </button>
-//         </div>
-//       </div>
-//     </motion.div>
-//   );
-// };
 
 const Contact = () => {
-  const [form, setForm] = useState<TAddUser>({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [loading, setLoading] = useState(false);
-  const { t } = useLanguage(); // Add this hook
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
-  };
+  const { t } = useLanguage(); 
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
 
-    try {
-      await axios.post(`${domin}/api/momen_protoflio/users`, form);
-      setForm({ name: "", email: "", message: "" });
-    } catch (error) {
-      console.log("err becaue i dont know", error);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <section className="contact-background min-h-screen">
@@ -162,103 +50,22 @@ const Contact = () => {
           className="text-center mb-12"
         >
           <p className="text-sm font-semibold text-blue-400 uppercase tracking-widest mb-2">
-            {t("contact.keepInTouch")} {/* Translate */}
+            {t("contact.keepInTouch")} 
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-            {t("contact.contact")} {/* Translate */}
+            {t("contact.contact")} 
           </h2>
           <div className="w-24 h-1 bg-linear-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
           <p className="text-gray-300 text-lg mt-6 max-w-2xl mx-auto">
-            {t("contact.opinion")} {/* Translate */}
+            {t("contact.opinion")} 
           </p>
         </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
-          {/* Globe Section */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="flex-1 w-full h-full min-h-[450px] lg:min-h-[550px] rounded-2xl overflow-hidden border border-gray-700/50 bg-blue-500/5"
-          >
-            <div className="w-full h-full">
-              <GlobeCanvas />
-            </div>
-          </motion.div>
+    
+        
 
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="flex-1 w-full"
-          >
-            <div className="bg-gray-900/50 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-gray-700/50">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-3">
-                  <label className="block text-white font-semibold text-base">
-                    {t("contact.name")} * {/* Translate */}
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={form.name}
-                    onChange={handleChange}
-                    required
-                    placeholder={t("contact.namePlaceholder")}
-                    className="w-full bg-gray-800/70 border-2 border-gray-600/50 rounded-xl py-4 px-4 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 transition-all duration-200 text-base"
-                  />
-                </div>
-
-                <div className="space-y-3">
-                  <label className="block text-white font-semibold text-base">
-                    {t("contact.yourEmail")} * {/* Translate */}
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    required
-                    placeholder={t("contact.emailPlaceholder")}
-                    className="w-full bg-gray-800/70 border-2 border-gray-600/50 rounded-xl py-4 px-4 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 transition-all duration-200 text-base"
-                  />
-                </div>
-
-                <div className="space-y-3">
-                  <label className="block text-white font-semibold text-base">
-                    {t("contact.message")} * {/* Translate */}
-                  </label>
-                  <textarea
-                    rows={6}
-                    name="message"
-                    value={form.message}
-                    onChange={handleChange}
-                    required
-                    placeholder={t("contact.messagePlaceholder")}
-                    className="w-full bg-gray-800/70 border-2 border-gray-600/50 rounded-xl py-4 px-4 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 resize-none transition-all duration-200 text-base min-h-[150px]"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 disabled:from-gray-600 disabled:to-gray-600 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed shadow-lg hover:shadow-xl text-lg"
-                >
-                  {loading ? (
-                    <div className="flex items-center justify-center gap-3">
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                      {t("contact.sending")} {/* Translate */}
-                    </div>
-                  ) : (
-                    t("contact.sendMessage") /* Translate */
-                  )}
-                </button>
-              </form>
-            </div>
-          </motion.div>
+        
         </div>
         {/* Contact Ways */}
         <motion.div
@@ -268,14 +75,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="w-full mt-16"
         >
-          <div className="text-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-              {t("contact.otherWays")}
-            </h3>
-            <p className="text-gray-400 max-w-md mx-auto">
-              {t("contact.otherWaysDescription")}
-            </p>
-          </div>
+     
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {contactWayList.map((contact, index) => (
