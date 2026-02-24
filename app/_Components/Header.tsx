@@ -104,7 +104,7 @@ const UserHeader = () => {
             </div>
             <div className="flex flex-col">
               <h1 className="text-2xl font-bold bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                {t("header.protoflio")}
+                {t("header.portfolio")}
               </h1>
               <span className="text-xs text-white/80 -mt-1">
                 {t("header.frontend")}

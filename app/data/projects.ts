@@ -63,27 +63,27 @@ export const projects: Project[] = [
     source_code_link: "https://github.com/momen-x/full_Stack_eCom",
     project_link: "https://full-stack-e-com-five.vercel.app",
   },
-  {
-    name: "work.project2Name",
-    description: "work.project2Description",
-    tags: [
-      {
-        name: "Next js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "postgresql",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: pizzaShop.src,
-    source_code_link: "https://github.com/momen-x/Pizza_Shop",
-    project_link: "https://pizza-shop-phi-sable.vercel.app",
-  },
+  // {
+  //   name: "work.project2Name",
+  //   description: "work.project2Description",
+  //   tags: [
+  //     {
+  //       name: "Next js",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "postgresql",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "tailwind",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: pizzaShop.src,
+  //   source_code_link: "https://github.com/momen-x/Pizza_Shop",
+  //   project_link: "https://pizza-shop-phi-sable.vercel.app",
+  // },
   {
     name: "work.project3Name",
     description: "work.project3Description",
